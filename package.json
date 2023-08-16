@@ -4,14 +4,17 @@
   "description": "Ml Web Server ",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon  app.js",
-    "start": "node  app.js"
+    "dev": "cd src && nodemon app.js",
+    "start": "cd src  && node  app.js"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/micrometreuk"
   },
+
+
+
   "devDependencies": {
     "nodemon": "^3.0.1"
   }
