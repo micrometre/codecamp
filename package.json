@@ -4,7 +4,7 @@
   "description": "Ml Web Server ",
   "main": "app.js",
   "scripts": {
-    "dev": "cd src && nodemon app.js",
+    "dev": "cd src && nodemon app.js --files 'python'",
     "start": "cd src  && node  app.js"
   },
   "license": "MIT",
