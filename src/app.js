@@ -1,17 +1,38 @@
-function Perceptron(no, learningRate = 0.00001) {
 
-// Set Initial Values
-this.learnc = learningRate;
-this.bias = 1;
+let currentDate = new Date(); 
+let currentHour = currentDate.getHours()
 
-// Compute Random Weights
-this.weights = [];
-for (let i = 0; i <= no; i++) {
-  this.weights[i] = Math.random() * 2 - 1;
+let currentMonth= currentDate.toLocaleString('default', {month: 'long'})
+
+
+function getMonthList(locales, format = "long") {
+  const year = new Date().getFullYear(); 
+  const monthList = [...Array(12).keys()]; 
+  const formatter = new Intl.DateTimeFormat(locales, {
+    month: format
+  });
+  const getMonthName = (monthIndex) =>
+    formatter.format(new Date(year, monthIndex));
+
+  return monthList.map(getMonthName);
 }
 
-// End Perceptron Object
+
+console.log(getMonthList())
+
+
+
+
+/*
+let num = 0
+if(num > 0 ){
+console.log("Good morning")
+}
+else if(num > 12 && num < 18){
+console.log("Good Afternon")
+}
+else {
+console.log("Good Eveninig")
 }
 
-
-console.log (Perceptron(111, 111))
+*/
